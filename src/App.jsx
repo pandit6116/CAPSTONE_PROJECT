@@ -18,7 +18,7 @@ function NavigationHandler({ isAuthenticated, setIsAuthenticated }) {
   const location = useLocation()
 
   useEffect(() => {
-    // Prevent forward navigation to protected routes
+    // navigation to protected routes
     const handlePopState = (event) => {
       const protectedRoutes = ['/home', '/cart']
       const isProtectedRoute = protectedRoutes.some(route => window.location.pathname.includes(route))
